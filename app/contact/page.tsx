@@ -5,14 +5,15 @@ export default function Contact() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        minHeight: "80vh",
+        height: "100vh", // Changed from minHeight
         background: "#f9f9f9",
+        overflow: "hidden", // Prevent site scrollbar
       }}
     >
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSfFjSi0CExEhICcoyZyb6cnwum2jCL3A4KtdOHqgXr7L_Znuw/viewform?embedded=true"
         width="100%"
-        height="950"
+        height="100%" // Changed from 950
         style={{
           maxWidth: "640px",
           border: "none",
