@@ -11,7 +11,7 @@ export default function Home() {
           alt="Drive For Sight Poster"
           width={800}
           height={600}
-          className="max-h-[120vh] max-w-[200vw] object-contain"
+          className="max-h-[100vh] max-w-[200vw] object-contain"
         />
       </div>
     </div>
