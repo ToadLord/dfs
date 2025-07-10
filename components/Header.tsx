@@ -40,7 +40,7 @@ export default function Header() {
 
       {/* Instagram & Mobile Menu Button */}
       <div className="flex items-center gap-4">
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-2xl">
+        <a href="https://www.instagram.com/driveforsight/" target="_blank" rel="noopener noreferrer" className="text-2xl">
           <FaInstagram />
         </a>
         <button className="md:hidden text-3xl" onClick={toggleMenu} aria-label="Toggle Menu">
