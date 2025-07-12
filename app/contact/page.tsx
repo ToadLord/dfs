@@ -12,7 +12,7 @@ export default async function Contact({
   const success = params.success === "1";
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+    <div className="flex items-center justify-center min-h-screen black transition-colors">
       {success ? (
         <div className="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-md">
           <svg
