@@ -1,33 +1,15 @@
 import { Resend } from "resend";
 import EmailTemplate from "@/components/EmailTemplate";
 import { redirect } from "next/navigation";
+import { sendContactEmail } from "./actions";
 
-export async function sendContactEmail(formData: FormData) {
-  "use server";
-  const resend = new Resend(process.env.RESEND_API_KEY);
-
-  const firstName = formData.get("firstName") as string;
-  const lastName = formData.get("lastName") as string;
-  const email = formData.get("email") as string;
-  const query = formData.get("query") as string;
-
-  await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "playstationforgerald@gmail.com",
-    subject: "New Contact Query",
-    react: EmailTemplate({ firstName, lastName, email, query }),
-  });
-
-  // Redirect to the same page with a success param
-  redirect("/contact?success=1");
-}
-
-export default function Contact({
+export default async function Contact({
   searchParams,
 }: {
-  searchParams: { success?: string };
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const success = searchParams?.success === "1";
+  const params = searchParams ? await searchParams : {};
+  const success = params.success === "1";
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
