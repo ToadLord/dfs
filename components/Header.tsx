@@ -12,10 +12,9 @@ export default function Header() {
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   const navLinks = [
-    { label: "About", href: "/about" },
-    { label: "Tickets", href: "/tickets" },
-    { label: "Register", href: "https://forms.gle/6uAPGJHLoZXFdiPKA" },
     { label: "DFSxCNIB", href: "/dfsxcnib" },
+
+    { label: "Register", href: "https://forms.gle/6uAPGJHLoZXFdiPKA" },
     { label: "Sponsor", href: "/sponsor" },
     { label: "Contact", href: "/contact" },
   ];
@@ -67,7 +66,7 @@ export default function Header() {
           rel="noopener noreferrer"
           className="text-2xl"
         >
-          <FaInstagram />
+          <FaInstagram className="ml-20"/>
         </a>
         <button
           className="md:hidden text-3xl"
