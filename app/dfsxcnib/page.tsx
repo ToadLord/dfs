@@ -1,7 +1,7 @@
 export default function Cnib() {
   return (
-    <main className="max-w-2xl mx-auto my-8 p-8 bg-white dark:bg-gray-900 rounded-xl shadow-lg font-sans leading-relaxed">
-      <h1 className="mb-4 text-3xl font-bold text-blue-900 dark:text-blue-300">
+    <main className="max-w-5xl mx-auto my-8 p-8 bg-gray-900 rounded-xl shadow-lg font-sans leading-relaxed text-white">
+      <h1 className="mb-4 text-3xl font-bold text-blue-300">
         About CNIB – The Canadian National Institute for the Blind
       </h1>
       <section>
@@ -22,7 +22,7 @@ export default function Cnib() {
           sight.
         </p>
       </section>
-      <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-700 dark:text-indigo-300">
+      <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
         How CNIB Makes a Difference
       </h2>
       <ul className="list-disc list-inside space-y-2">
@@ -51,11 +51,11 @@ export default function Cnib() {
         helping to build a future where vision loss is not a limitation, but a
         different way of experiencing the world.
       </p>
-      <hr className="my-8 border-gray-300 dark:border-gray-700" />
-      <h1 className="text-3xl font-bold text-blue-900 dark:text-blue-300 mb-4">
+      <hr className="my-8 border-gray-700" />
+      <h1 className="text-3xl font-bold text-blue-300 mb-4">
         About Drive for Sight
       </h1>
-      <h2 className="text-2xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">
+      <h2 className="text-2xl font-semibold text-indigo-300 mb-2">
         Our Mission
       </h2>
       <p>
@@ -65,7 +65,7 @@ export default function Cnib() {
         businesses, and supporters to make a meaningful impact for the CNIB
         Foundation.
       </p>
-      <h2 className="text-2xl font-semibold text-indigo-700 dark:text-indigo-300 mt-6 mb-2">
+      <h2 className="text-2xl font-semibold text-indigo-300 mt-6 mb-2">
         Our Story
       </h2>
       <p>
@@ -87,7 +87,7 @@ export default function Cnib() {
         show can do more than showcase vehicles — it can support a cause, spark
         conversations, and make a meaningful impact.
       </p>
-      <h2 className="text-2xl font-semibold text-indigo-700 dark:text-indigo-300 mt-6 mb-2">
+      <h2 className="text-2xl font-semibold text-indigo-300 mt-6 mb-2">
         Why Support CNIB and Vision Loss Awareness
       </h2>
       <p>

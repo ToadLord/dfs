@@ -4,24 +4,21 @@ import "./globals.css";
 import Header from "@/components/Header";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['600'], // Semibold
-  variable: '--font-poppins',
+  subsets: ["latin"],
+  weight: ["600"], // Semibold
 });
 
 const roboto = Roboto({
-  subsets: ['latin'],
-  variable: '--font-roboto',
+  subsets: ["latin"],
+  weight: "100",
 });
 
 export const metadata: Metadata = {
@@ -36,9 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${roboto.variable} ${roboto.variable} antialiased`}
-      >
+      <body className={poppins.className}>
         <Header />
         {children}
       </body>

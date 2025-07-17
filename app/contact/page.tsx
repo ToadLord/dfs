@@ -14,7 +14,7 @@ export default async function Contact({
   return (
     <div className="flex items-center justify-center min-h-screen black transition-colors">
       {success ? (
-        <div className="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-md">
+        <div className="flex flex-col items-center justify-center bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-md">
           <svg
             className="w-16 h-16 text-green-500 mb-4"
             fill="none"
@@ -38,22 +38,22 @@ export default async function Contact({
               d="M9 12l2 2 4-4"
             />
           </svg>
-          <p className="text-lg font-semibold text-gray-800 dark:text-gray-100 text-center">
+          <p className="text-lg font-semibold text-gray-100 text-center">
             Your Query has been sent
           </p>
         </div>
       ) : (
         <form
           action={sendContactEmail}
-          className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-md space-y-6 transition-colors"
+          className="bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-5xl space-y-6 transition-colors"
         >
-          <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 text-center">
+          <h2 className="text-2xl font-bold text-gray-100 mb-4 text-center">
             Contact Us
           </h2>
           <div>
             <label
               htmlFor="firstName"
-              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              className="block text-sm font-medium text-gray-300 mb-1"
             >
               First Name
             </label>
@@ -63,13 +63,13 @@ export default async function Contact({
               type="text"
               placeholder="First Name"
               required
-              className="border border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border border-gray-700 bg-gray-900 text-gray-100 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
           <div>
             <label
               htmlFor="lastName"
-              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              className="block text-sm font-medium text-gray-300 mb-1"
             >
               Last Name
             </label>
@@ -79,13 +79,13 @@ export default async function Contact({
               type="text"
               placeholder="Last Name"
               required
-              className="border border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border border-gray-700 bg-gray-900 text-gray-100 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              className="block text-sm font-medium text-gray-300 mb-1"
             >
               Email
             </label>
@@ -95,13 +95,13 @@ export default async function Contact({
               type="email"
               placeholder="Email"
               required
-              className="border border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border border-gray-700 bg-gray-900 text-gray-100 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
           <div>
             <label
               htmlFor="query"
-              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              className="block text-sm font-medium text-gray-300 mb-1"
             >
               Your Query
             </label>
@@ -111,7 +111,7 @@ export default async function Contact({
               placeholder="Your Query"
               required
               rows={4}
-              className="border border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+              className="border border-gray-700 bg-gray-900 text-gray-100 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
             />
           </div>
           <button
