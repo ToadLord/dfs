@@ -24,6 +24,11 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Drive For Sight",
   description: "DFSxCNIB",
+    openGraph: {
+    title: "Drive For Sight",
+    description: "DFSxCNIB",
+    images: ["/background.png"],
+  },
 };
 
 export default function RootLayout({
