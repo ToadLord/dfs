@@ -13,10 +13,10 @@ export default function Header() {
 
   const navLinks = [
     { label: "DFSxCNIB", href: "/dfsxcnib" },
-
     { label: "Register", href: "https://forms.gle/6uAPGJHLoZXFdiPKA" },
     { label: "Sponsor", href: "/sponsor" },
     { label: "Contact", href: "/contact" },
+    { label: "Donate", href: "/donate" }
   ];
 
   return (
@@ -74,7 +74,7 @@ export default function Header() {
 
       {/* Mobile Menu Drawer */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-black text-white flex flex-col items-center py-4 md:hidden">
+        <div className="absolute top-full left-2 right-2 mx-auto mt-2 bg-black/90 backdrop-blur-md text-white flex flex-col items-center py-6 rounded-2xl shadow-2xl md:hidden transition-all duration-300">
           {navLinks.map((link) =>
             link.href.startsWith("http") ? (
               <a
@@ -82,7 +82,7 @@ export default function Header() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="py-2 text-lg hover:text-yellow-400"
+                className="py-3 px-6 w-full text-lg font-semibold rounded-lg hover:bg-yellow-400/10 hover:text-yellow-400 transition"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
@@ -91,7 +91,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="py-2 text-lg hover:text-yellow-400"
+                className="py-3 px-6 w-full text-lg font-semibold rounded-lg hover:bg-yellow-400/10 hover:text-yellow-400 transition"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}

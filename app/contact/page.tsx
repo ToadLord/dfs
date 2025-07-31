@@ -1,6 +1,3 @@
-import { Resend } from "resend";
-import EmailTemplate from "@/components/EmailTemplate";
-import { redirect } from "next/navigation";
 import { sendContactEmail } from "./actions";
 
 export default async function Contact({
@@ -45,7 +42,7 @@ export default async function Contact({
       ) : (
         <form
           action={sendContactEmail}
-          className="bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-5xl space-y-6 transition-colors"
+          className="bg-gray-800 p-8 rounded-xl shadow-lg max-w-5xl space-y-6 transition-colors w-[95vw]"
         >
           <h2 className="text-2xl font-bold text-gray-100 mb-4 text-center">
             Contact Us

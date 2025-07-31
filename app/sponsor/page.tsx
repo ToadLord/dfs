@@ -1,6 +1,6 @@
 export default function Sponsor() {
   return (
-    <main className="max-w-5xl mx-auto my-8 p-8 bg-gray-900 rounded-xl shadow-lg font-sans leading-relaxed">
+    <main className="max-w-5xl mx-auto my-8 p-8 bg-gray-900 rounded-xl shadow-lg font-sans leading-relaxed w-[95vw]">
       <h1 className="mb-4 text-3xl font-bold text-blue-300 text-center">
         Drive for Sight 2025 – Sponsorship Opportunities
       </h1>
