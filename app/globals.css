@@ -20,6 +20,19 @@
 }
 
 body {
+  background: #000000; /* solid black */
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Remove or update the mobile background media query as well */
+@media (max-width: 640px) {
+  body {
+    background: #000000; /* solid black for mobile too */
+  }
+}
+
+/* body {
   background: url("/background.png") fixed;
   background-size: cover;
   color: var(--foreground);
@@ -31,7 +44,7 @@ body {
     background: url("/mobile-background2.png") fixed;
     background-size: cover;
   }
-}
+} */
 
 html {
     overflow: hidden;
