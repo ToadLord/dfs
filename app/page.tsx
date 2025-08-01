@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="flex items-center justify-center min-h-125">
       <span
-        className={`${cursive.className} text-6xl md:text-9xl text-center`}
+        className={`${cursive.className} text-5xl md:text-9xl text-center`}
       >
         Drive for Sight
       </span>
