@@ -1,6 +1,6 @@
 export default function Cnib() {
   return (
-    <main className="max-w-5xl mx-auto my-8 p-8 bg-gray-900 rounded-xl shadow-lg font-sans leading-relaxed text-white w-[95vw]">
+    <main className="max-w-5xl mx-auto my-8 p-8 bg-gray-900 rounded-xl shadow-lg leading-relaxed text-white w-[95vw]">
       <h1 className="mb-4 text-3xl font-bold text-blue-300">
         About CNIB – The Canadian National Institute for the Blind
       </h1>

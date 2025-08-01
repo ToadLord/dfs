@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins, Roboto, Cedarville_Cursive } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Poppins,
+  Roboto,
+  Cedarville_Cursive,
+  Merriweather,
+} from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Marquee from "../components/Marquee";
@@ -21,14 +28,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["600"], // Semibold
+  weight: ["400", "600", "700", "900"], // Add all desired weights here
 });
 
 const cursive = Cedarville_Cursive({
   subsets: ["latin"],
-  weight: ["400"]
+  weight: ["400"],
 });
 
 const roboto = Roboto({
@@ -65,6 +77,7 @@ export default function RootLayout({
             <Marquee images={images} rate={-1} />
             <Marquee images={images} rate={1} />
             <Marquee images={images} rate={-1} />
+            <Marquee images={images} rate={1} />
             {/* Add more marquees as needed */}
           </div>
 

@@ -16,12 +16,23 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-125">
-      <span
-        className={`${cursive.className} text-5xl md:text-9xl text-center`}
-      >
-        Drive for Sight
-      </span>
+    <div>
+      <div className="flex items-center justify-center min-h-125">
+        <span
+          className={`${cursive.className} text-5xl md:text-9xl text-center`}
+        >
+          Drive for Sight
+        </span>
+      </div>
+      <div className={`${cursive.className} ml-6 fixed bottom-4 right-4`}>
+        <a
+          href="https://www.instagram.com/delplanckephotos/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Photographer: @delplanckephotos
+        </a>
+      </div>
     </div>
   );
 }

@@ -20,7 +20,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-transparent text-white px-6 py-4 flex items-center justify-between relative z-50">
+    <header className="bg-transparent text-white px-6 py-4 flex items-center justify-between relative z-50 font-semibold">
       {/* Home Button */}
       <div className="flex-shrink-0">
         <Link href="/">
