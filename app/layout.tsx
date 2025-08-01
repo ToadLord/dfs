@@ -58,7 +58,7 @@ export default function RootLayout({
         <div className="min-h-screen relative">
           {/* ...your main content here... */}
 
-          <div className="fixed inset-0 -z-10 pointer-events-none opacity-70">
+          <div className="fixed inset-0 -z-10 pointer-events-none opacity-75">
             <Marquee images={images} rate={1} />
             <Marquee images={images} rate={-1} />
             <Marquee images={images} rate={1} />
