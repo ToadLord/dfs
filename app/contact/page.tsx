@@ -54,6 +54,7 @@ export default async function Contact({
             >
               First Name
             </label>
+            <span className="sr-only">First Name</span>
             <input
               id="firstName"
               name="firstName"
@@ -70,6 +71,7 @@ export default async function Contact({
             >
               Last Name
             </label>
+            <span className="sr-only">Last Name</span>
             <input
               id="lastName"
               name="lastName"
@@ -86,6 +88,7 @@ export default async function Contact({
             >
               Email
             </label>
+            <span className="sr-only">Email</span>
             <input
               id="email"
               name="email"
@@ -102,6 +105,7 @@ export default async function Contact({
             >
               Your Query
             </label>
+            <span className="sr-only">Your Query</span>
             <textarea
               id="query"
               name="query"
@@ -117,6 +121,7 @@ export default async function Contact({
           >
             Send
           </button>
+          <span className="sr-only">Send</span>
         </form>
       )}
     </div>
