@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Drive For Sight",
     description: "DFSxCNIB",
-    images: ["/background.png"],
+    images: ["/dfs.png"],
   },
 };
 
