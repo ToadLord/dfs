@@ -32,7 +32,7 @@ export default function EmailTemplate({
           color: "#2563eb",
         }}
       >
-        New Contact Query
+        Query
       </h2>
       <div style={{ marginBottom: 12 }}>
         <span style={{ fontWeight: 600 }}>Name:</span>{" "}

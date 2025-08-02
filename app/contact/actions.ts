@@ -12,9 +12,9 @@ export async function sendContactEmail(formData: FormData) {
   const query = formData.get("query") as string;
 
   await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "playstationforgerald@gmail.com",
-    subject: "New Contact Query",
+    from: "contact@driveforsight.com",
+    to: ['playstationforgerald@gmail.com', 'driveforsight@gmail.com'],
+    subject: "Query",
     react: EmailTemplate({ firstName, lastName, email, query }),
   });
 
