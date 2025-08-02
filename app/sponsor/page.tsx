@@ -1,84 +1,83 @@
-export default function Sponsor() {
+export default function Sponsorship() {
   return (
-    <main className="max-w-5xl mx-auto my-8 p-8 bg-gray-900 rounded-xl shadow-lg font-sans leading-relaxed w-[95vw]">
-      <h1 className="mb-4 text-3xl font-bold text-blue-300 text-center">
-        Drive for Sight 2025 – Sponsorship Opportunities
+    <main className="max-w-5xl mx-auto my-8 p-8 bg-gray-900 rounded-xl shadow-lg leading-relaxed text-white w-[95vw]">
+      <h1 className="mb-4 text-3xl font-bold text-blue-300">
+        Sponsorship Opportunities – Drive for Sight 2025
       </h1>
-      <p className="mb-10 text-base text-gray-100">
-        Join us for the first annual Drive for Sight Charity Car Show on{" "}
-        <strong>Saturday, September 6, 2025</strong>, and be part of a
-        meaningful cause supporting sight-related initiatives while showcasing
-        your brand to the Ottawa community.
+      <section>
+        <p>
+          Join us in making a difference for Canadians living with vision loss!
+          By sponsoring Drive for Sight, your business or organization will gain
+          valuable exposure while supporting the CNIB Foundation’s life-changing
+          programs.
+        </p>
+        <p className="mt-2">
+          Choose from a range of sponsorship packages designed to maximize your
+          impact and visibility at our event.
+        </p>
+      </section>
+
+      <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
+        Visionary Sponsor – <span className="text-yellow-300">$750</span>
+      </h2>
+      <ul className="list-disc list-inside space-y-2">
+        <li>Top-tier presence on all event promotions and social media</li>
+        <li>Logo placement on event banner and website</li>
+        <li>10x10 booth near the main area</li>
+        <li>Recognition in recap video and event photo gallery</li>
+      </ul>
+      <p className="mt-2 italic text-yellow-200">
+        Light up the stage — and the cause.
       </p>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold text-indigo-300 mb-2">
-          Community Vibes Sponsor – <span className="text-[#FFD700]">$1500</span>
-        </h2>
-        <ul className="list-disc list-inside space-y-1 text-gray-100">
-          <li>Your logo on the DJ booth and stage area signage</li>
-          <li>Live shoutouts during the event</li>
-          <li>Premium feature on all event social media and promotions</li>
-          <li>Logo on the event banner and website</li>
-          <li>Featured brand booth space (10x10) near main stage</li>
-          <li>Recognition in recap video + photo gallery</li>
-        </ul>
-      </section>
+      <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
+        Spotlight Feature Car Sponsor –{" "}
+        <span className="text-pink-300">$400</span>
+      </h2>
+      <ul className="list-disc list-inside space-y-2">
+        <li>
+          "Presented by" sign featuring your logo in front of a spotlighted car
+        </li>
+        <li>Branded social media post featuring your car and company</li>
+        <li>Logo on event banner and website</li>
+      </ul>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold text-indigo-300 mb-2">
-          SILVER Feature Car Sponsor –{" "}
-          <span className="text-[#E5E4E2]">$800</span>
-        </h2>
-        <ul className="list-disc list-inside space-y-1 text-gray-100">
-          <li>
-            Logo and name featured on a “Presented by” sign in front of a
-            top-tier show car
-          </li>
-          <li>
-            Shoutout on social media + featured post with the car and your brand
-          </li>
-          <li>Logo on event banner and website</li>
-          <li>1 free car entry pass to the show</li>
-        </ul>
-      </section>
+      <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
+        Street Vision Vendor Package –{" "}
+        <span className="text-green-300">$250</span>
+      </h2>
+      <ul className="list-disc list-inside space-y-2">
+        <li>Reserved 10x10 vendor space</li>
+        <li>Space for 1 display car (optional)</li>
+        <li>Logo on event banner and website</li>
+        <li>Social media shoutout and vendor map listing</li>
+      </ul>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold text-indigo-300 mb-2">
-          BRONZE Award Sponsor – <span className="text-[#CD7F32]">$250</span>
-        </h2>
-        <ul className="list-disc list-inside space-y-1 text-gray-100">
-          <li>Optional: Present the award in person (photo opportunity)</li>
-          <li>Logo on event banner and website</li>
-          <li>Shoutout on social media + award winners post</li>
-          <li>Logo on the award</li>
-        </ul>
-      </section>
+      <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
+        Raffle Partner – <span className="text-orange-300">Value: $75+</span>
+      </h2>
+      <ul className="list-disc list-inside space-y-2">
+        <li>Branded sign displayed next to your donated prize</li>
+        <li>Verbal shoutout during raffle draws</li>
+        <li>Logo or name in raffle promotion posts</li>
+      </ul>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold text-indigo-300 mb-2">
-          Street Vendor Package – <span className="text-[#00ff26]">$500</span>
-        </h2>
-        <ul className="list-disc list-inside space-y-1 text-gray-100">
-          <li>Reserved 10x10 vendor space</li>
-          <li>Room for 1 display car if desired</li>
-          <li>Logo on event banner and website</li>
-          <li>Social media shoutout + vendor map listing</li>
-        </ul>
-      </section>
+      {/* <hr className="my-8 border-gray-700" />
 
-      <section>
-        <h2 className="text-2xl font-semibold text-indigo-300 mb-2">
-          Raffle Prize Partner –{" "}
-          <span className="text-[#fe3333]">Value: $100+</span>
-        </h2>
-        <ul className="list-disc list-inside space-y-1 text-gray-100">
-          <li>Branded sign next to your item on the raffle table</li>
-          <li>Verbal thanks during live raffle draws</li>
-          <li>Logo or name in social media raffle announcement</li>
-          <li>Optional: Promotional item/flyer in swag bags</li>
-        </ul>
-      </section>
+      <h2 className="text-2xl font-semibold text-blue-300 mb-2">
+        Ready to Sponsor?
+      </h2>
+      <p>
+        For more information or to secure your sponsorship, please contact us at{" "}
+        <a
+          href="mailto:info@driveforsight.ca"
+          className="text-indigo-300 underline"
+        >
+          info@driveforsight.ca
+        </a>
+        . We look forward to partnering with you to drive change and support
+        vision health in our community!
+      </p> */}
     </main>
   );
 }
