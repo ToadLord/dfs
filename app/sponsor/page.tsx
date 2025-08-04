@@ -11,13 +11,13 @@ export default function Sponsorship() {
           valuable exposure while supporting the CNIB Foundation’s life-changing
           programs.
         </p>
-        <p className="mt-2">
+        {/* <p className="mt-2">
           Choose from a range of sponsorship packages designed to maximize your
           impact and visibility at our event.
-        </p>
+        </p> */}
       </section>
 
-      <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
+      {/* <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
         Visionary Sponsor – <span className="text-yellow-300">$750</span>
       </h2>
       <ul className="list-disc list-inside space-y-2">
@@ -28,9 +28,9 @@ export default function Sponsorship() {
       </ul>
       <p className="mt-2 italic text-yellow-200">
         Light up the stage — and the cause.
-      </p>
+      </p> */}
 
-      <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
+      {/* <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
         Spotlight Feature Car Sponsor –{" "}
         <span className="text-pink-300">$400</span>
       </h2>
@@ -40,11 +40,11 @@ export default function Sponsorship() {
         </li>
         <li>Branded social media post featuring your car and company</li>
         <li>Logo on event banner and website</li>
-      </ul>
+      </ul> */}
 
       <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
         Street Vision Vendor Package –{" "}
-        <span className="text-green-300">$250</span>
+        <span className="text-green-300">$100</span>
       </h2>
       <ul className="list-disc list-inside space-y-2">
         <li>Reserved 10x10 vendor space</li>
@@ -53,14 +53,14 @@ export default function Sponsorship() {
         <li>Social media shoutout and vendor map listing</li>
       </ul>
 
-      <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
+      {/* <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
         Raffle Partner – <span className="text-orange-300">Value: $75+</span>
       </h2>
       <ul className="list-disc list-inside space-y-2">
         <li>Branded sign displayed next to your donated prize</li>
         <li>Verbal shoutout during raffle draws</li>
         <li>Logo or name in raffle promotion posts</li>
-      </ul>
+      </ul> */}
 
       {/* <hr className="my-8 border-gray-700" />
 
