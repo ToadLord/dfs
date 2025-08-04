@@ -43,14 +43,12 @@ export default function Sponsorship() {
       </ul> */}
 
       <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
-        Street Vision Vendor Package –{" "}
+        Drive for Sight Vendor Package –{" "}
         <span className="text-green-300">$100</span>
       </h2>
       <ul className="list-disc list-inside space-y-2">
         <li>Reserved 10x10 vendor space</li>
-        <li>Space for 1 display car (optional)</li>
-        <li>Logo on event banner and website</li>
-        <li>Social media shoutout and vendor map listing</li>
+        <li>Business logo featured on the official event website</li>
       </ul>
 
       {/* <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
