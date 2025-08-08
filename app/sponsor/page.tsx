@@ -18,7 +18,7 @@ export default function Sponsorship() {
       </section>
 
       <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
-        Title Sponsor – <span className="text-yellow-300">$750</span>
+        Visionary Sponsor – <span className="text-yellow-300">$750</span>
       </h2>
       <ul className="list-disc list-inside space-y-2">
         <li>Top-tier presence on all event promotions and social media</li>
