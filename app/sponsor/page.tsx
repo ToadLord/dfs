@@ -17,8 +17,8 @@ export default function Sponsorship() {
         </p> */}
       </section>
 
-      {/* <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
-        Visionary Sponsor – <span className="text-yellow-300">$750</span>
+      <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
+        Title Sponsor – <span className="text-yellow-300">$750</span>
       </h2>
       <ul className="list-disc list-inside space-y-2">
         <li>Top-tier presence on all event promotions and social media</li>
@@ -28,7 +28,7 @@ export default function Sponsorship() {
       </ul>
       <p className="mt-2 italic text-yellow-200">
         Light up the stage — and the cause.
-      </p> */}
+      </p>
 
       {/* <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
         Spotlight Feature Car Sponsor –{" "}
