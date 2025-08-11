@@ -13,7 +13,7 @@ export default function Header() {
 
   const navLinks = [
     { label: "DFSxCNIB", href: "/dfsxcnib" },
-    { label: "Register", href: "https://forms.gle/6uAPGJHLoZXFdiPKA" },
+    { label: "Register", href: "/register" },
     { label: "Sponsor", href: "/sponsor" },
     { label: "Contact", href: "/contact" },
     { label: "Donate", href: "/donate" }
