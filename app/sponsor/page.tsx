@@ -11,36 +11,28 @@ export default function Sponsorship() {
           valuable exposure while supporting the CNIB Foundation’s life-changing
           programs.
         </p>
-        {/* <p className="mt-2">
-          Choose from a range of sponsorship packages designed to maximize your
-          impact and visibility at our event.
-        </p> */}
       </section>
 
       <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
-        Visionary Sponsor – <span className="text-yellow-300">$400</span>
+        Advocate Sponsor – <span className="text-pink-300">$250</span>
+      </h2>
+      <ul className="list-disc list-inside space-y-2">
+        <li>Logo displayed on the event website’s sponsor section</li>
+        <li>Mention in one social media post before the event</li>
+        <li>Great way to show support and be part of the cause</li>
+      </ul>
+
+      <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
+        Visionary Sponsor – <span className="text-yellow-300">$500</span>
       </h2>
       <ul className="list-disc list-inside space-y-2">
         <li>Top-tier presence on all event promotions and social media</li>
-        <li>Logo placement on event banner and website</li>
-        {/* <li>10x10 booth near the main area</li> */}
+        <li>Logo displayed on the event website’s sponsor section</li>
         <li>Recognition in recap video and event photo gallery</li>
+        <li>On-stage thank-you during the event</li>
+        <li>Option to display a banner or promotional material at the venue</li>
+        <li>Light up the stage — and the cause</li>
       </ul>
-      <p className="mt-2 italic text-yellow-200">
-        Light up the stage — and the cause.
-      </p>
-
-      {/* <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
-        Spotlight Feature Car Sponsor –{" "}
-        <span className="text-pink-300">$400</span>
-      </h2>
-      <ul className="list-disc list-inside space-y-2">
-        <li>
-          "Presented by" sign featuring your logo in front of a spotlighted car
-        </li>
-        <li>Branded social media post featuring your car and company</li>
-        <li>Logo on event banner and website</li>
-      </ul> */}
 
       <h2 className="mt-8 mb-3 text-2xl font-semibold text-indigo-300">
         Drive for Sight Vendor Package –{" "}
