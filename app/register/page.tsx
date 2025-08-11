@@ -19,8 +19,12 @@ export default function Register() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, files } = e.target;
     if (name === "files" && files) {
-      // Combine with existing files, filter duplicates by name
-      const newFiles = Array.from(files);
+      // Accept all images and pdfs, no count/size restriction
+      const newFiles = Array.from(files).filter(
+        (file) =>
+          file.type.startsWith("image/") || file.type === "application/pdf"
+      );
+      // Combine with existing files, filter duplicates if desired
       const allFiles = [...form.files, ...newFiles].filter(
         (file, idx, arr) =>
           arr.findIndex((f) => f.name === file.name && f.size === file.size) ===
@@ -228,13 +232,13 @@ export default function Register() {
             onDrop={(e) => {
               e.preventDefault();
               const files = Array.from(e.dataTransfer.files);
-              // Only accept images and pdfs
+              // Accept all images and pdfs, no count/size restriction
               const accepted = files.filter(
                 (file) =>
                   file.type.startsWith("image/") ||
                   file.type === "application/pdf"
               );
-              // Combine with existing files, filter duplicates
+              // Combine with existing files, filter duplicates if desired
               const allFiles = [...form.files, ...accepted].filter(
                 (file, idx, arr) =>
                   arr.findIndex(

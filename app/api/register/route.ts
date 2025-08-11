@@ -31,12 +31,6 @@ export async function POST(req: NextRequest) {
 
     // Upload files
     const files = formData.getAll("files") as File[];
-    if (files.length < 3 || files.length > 5) {
-      return NextResponse.json(
-        { error: "Please upload 3 to 5 files." },
-        { status: 400 }
-      );
-    }
 
     const uploadedFiles: string[] = [];
     for (let i = 0; i < files.length; i++) {
