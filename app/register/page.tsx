@@ -38,6 +38,11 @@ export default function Register() {
     }
   };
 
+  const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setForm((f) => ({ ...f, [name]: value }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -203,7 +208,7 @@ export default function Register() {
             rows={4}
             className="w-full rounded p-2 bg-gray-800 border border-gray-700 focus:border-blue-400"
             value={form.description}
-            onChange={handleChange}
+            onChange={handleTextareaChange}
             disabled={submitting}
           />
         </div>
