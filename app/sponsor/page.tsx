@@ -23,7 +23,7 @@ export default function Sponsorship() {
       <ul className="list-disc list-inside space-y-2">
         <li>Top-tier presence on all event promotions and social media</li>
         <li>Logo placement on event banner and website</li>
-        <li>10x10 booth near the main area</li>
+        {/* <li>10x10 booth near the main area</li> */}
         <li>Recognition in recap video and event photo gallery</li>
       </ul>
       <p className="mt-2 italic text-yellow-200">
