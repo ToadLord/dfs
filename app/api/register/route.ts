@@ -23,6 +23,7 @@ export async function POST(req: NextRequest) {
     const phone = formData.get("phone") as string;
     const instagram = formData.get("instagram") as string;
     const vehicle = formData.get("vehicle") as string;
+    const description = formData.get("description") as string;
 
     // Prepare a folder for this submission
     const timestamp = Date.now();
@@ -61,6 +62,7 @@ export async function POST(req: NextRequest) {
       phone,
       instagram,
       vehicle,
+      description,
       files: uploadedFiles,
       submittedAt: new Date().toISOString(),
     };

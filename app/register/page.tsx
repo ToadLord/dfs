@@ -8,6 +8,7 @@ export default function Register() {
     phone: "",
     instagram: "",
     vehicle: "",
+    description: "", // <-- Add this line
     files: [] as File[],
   });
   const [previews, setPreviews] = useState<string[]>([]);
@@ -49,6 +50,7 @@ export default function Register() {
       formData.append("phone", form.phone);
       formData.append("instagram", form.instagram);
       formData.append("vehicle", form.vehicle);
+      formData.append("description", form.description);
       form.files.forEach((file) => formData.append("files", file));
 
       // Replace this endpoint with your backend API that uploads to Google Cloud Storage
@@ -79,9 +81,7 @@ export default function Register() {
         <h1 className="text-3xl font-bold text-blue-300 mb-4">
           Thank you for registering!
         </h1>
-        <p>
-          We’ve received your submission.
-        </p>
+        <p>We’ve received your submission.</p>
       </main>
     );
   }
@@ -181,6 +181,28 @@ export default function Register() {
             id="vehicle"
             className="w-full rounded p-2 bg-gray-800 border border-gray-700 focus:border-blue-400"
             value={form.vehicle}
+            onChange={handleChange}
+            disabled={submitting}
+          />
+        </div>
+        <div>
+          <label className="block font-semibold mb-1" htmlFor="description">
+            Describe your car as if you're explaining it to someone who can't
+            see it. <span className="text-red-400">*</span>
+          </label>
+          <p className="text-sm text-gray-300 mb-2">
+            What does it look like? What details or features make it stand out?
+            Is there a story behind it or a feeling you hope it conveys? This
+            description will be used to create an audio feature for guests with
+            vision loss during the show.
+          </p>
+          <textarea
+            required
+            name="description"
+            id="description"
+            rows={4}
+            className="w-full rounded p-2 bg-gray-800 border border-gray-700 focus:border-blue-400"
+            value={form.description}
             onChange={handleChange}
             disabled={submitting}
           />
