@@ -241,13 +241,11 @@ export default function Register() {
         </div>
         <div>
           <label className="block font-semibold mb-1" htmlFor="files">
-            Please submit one photo of your vehicle.{" "}
-            <span className="text-red-400">*</span>
+            Please submit 3-5 photos of your vehicle. <span className="text-red-400">*</span>
           </label>
-          {/* <p className="text-sm text-gray-300 mb-2">
-            Include a variety of angles (front, rear, side, interior, standout
-            features). Max 5 files, 10MB each.
-          </p> */}
+          <p className="text-sm text-gray-300 mb-2">
+            Only PNG and JPG are accepted.
+          </p>
           <label
             htmlFor="files"
             className="flex flex-col items-center justify-center border-2 border-dashed border-blue-400 rounded-lg p-6 cursor-pointer bg-gray-800 hover:bg-gray-700 transition-colors"
