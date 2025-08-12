@@ -23,35 +23,33 @@ export default function Register() {
       const previewUrls: string[] = [];
 
       for (const file of Array.from(files)) {
-        if (
-          file.type === "image/heic" ||
-          file.type === "image/heif" ||
-          file.name.toLowerCase().endsWith(".heic") ||
-          file.name.toLowerCase().endsWith(".heif")
-        ) {
-          // Dynamically import heic2any only on the client
-          try {
-            const heic2any = (await import("heic2any")).default;
-            const convertedBlob = (await heic2any({
-              blob: file,
-              toType: "image/png", // Convert to PNG
-            })) as Blob;
-            const convertedFile = new File(
-              [convertedBlob],
-              file.name.replace(/\.(heic|heif)$/i, ".png"), // Use .png extension
-              { type: "image/png" }
-            );
-            newFiles.push(convertedFile);
-            previewUrls.push(URL.createObjectURL(convertedFile));
-          } catch (err) {
-            // Optionally handle conversion error
-          }
-        } else {
-          newFiles.push(file);
-          previewUrls.push(
-            file.type.startsWith("image/") ? URL.createObjectURL(file) : ""
-          );
-        }
+        // if (
+        //   file.type === "image/heic" ||
+        //   file.type === "image/heif" ||
+        //   file.name.toLowerCase().endsWith(".heic") ||
+        //   file.name.toLowerCase().endsWith(".heif")
+        // ) {
+        //   // Dynamically import heic2any only on the client
+        //   try {
+        //     const heic2any = (await import("heic2any")).default;
+        //     const convertedBlob = (await heic2any({
+        //       blob: file,
+        //       toType: "image/png", // Convert to PNG
+        //     })) as Blob;
+        //     const convertedFile = new File(
+        //       [convertedBlob],
+        //       file.name.replace(/\.(heic|heif)$/i, ".png"), // Use .png extension
+        //       { type: "image/png" }
+        //     );
+        //     newFiles.push(convertedFile);
+        //     previewUrls.push(URL.createObjectURL(convertedFile));
+        //   } catch (err) {
+        //     // Optionally handle conversion error
+        //   }
+        // } else {
+        newFiles.push(file);
+        previewUrls.push(URL.createObjectURL(file));
+        // }
       }
 
       // Combine with existing files, filter duplicates if desired
@@ -243,13 +241,13 @@ export default function Register() {
         </div>
         <div>
           <label className="block font-semibold mb-1" htmlFor="files">
-            Please upload 3 to 5 clear photos of your vehicle{" "}
+            Please submit one photo of your vehicle.{" "}
             <span className="text-red-400">*</span>
           </label>
-          <p className="text-sm text-gray-300 mb-2">
+          {/* <p className="text-sm text-gray-300 mb-2">
             Include a variety of angles (front, rear, side, interior, standout
             features). Max 5 files, 10MB each.
-          </p>
+          </p> */}
           <label
             htmlFor="files"
             className="flex flex-col items-center justify-center border-2 border-dashed border-blue-400 rounded-lg p-6 cursor-pointer bg-gray-800 hover:bg-gray-700 transition-colors"
@@ -268,7 +266,7 @@ export default function Register() {
               );
               setForm((f) => ({ ...f, files: allFiles }));
               const previewUrls = allFiles.map((file) =>
-                file.type.startsWith("image/") ? URL.createObjectURL(file) : ""
+                URL.createObjectURL(file)
               );
               setPreviews(previewUrls);
             }}
@@ -295,6 +293,7 @@ export default function Register() {
               name="files"
               id="files"
               multiple
+              accept="" // Remove restrictions by leaving this empty
               onChange={handleChange}
               disabled={submitting}
               className="hidden"
