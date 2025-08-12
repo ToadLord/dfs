@@ -13,6 +13,14 @@ const storage = new Storage({
 
 export const runtime = "nodejs";
 
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: "20mb", // Allows request bodies up to 20MB
+    },
+  },
+};
+
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
