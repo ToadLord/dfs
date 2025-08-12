@@ -91,7 +91,7 @@ export default function Register() {
         body: formData,
       });
 
-      if (!res.ok) throw new Error("Submission failed. Please try again.");
+      if (!res.ok) throw new Error("Please input a jpg or png.");
       setSuccess(true);
     } catch (err: any) {
       setError(err.message || "Something went wrong.");
