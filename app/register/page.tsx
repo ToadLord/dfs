@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import heic2any from "heic2any";
 
 export default function Register() {
   const [form, setForm] = useState({
@@ -25,8 +24,9 @@ export default function Register() {
 
       for (const file of Array.from(files)) {
         if (file.type === "image/heic" || file.name.endsWith(".heic")) {
-          // Convert HEIC to JPEG
+          // Dynamically import heic2any only on the client
           try {
+            const heic2any = (await import("heic2any")).default;
             const convertedBlob = (await heic2any({
               blob: file,
               toType: "image/jpeg",
