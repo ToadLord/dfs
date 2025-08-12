@@ -91,7 +91,10 @@ export default function Register() {
         body: formData,
       });
 
-      if (!res.ok) throw new Error("Either your image(s) aren't pngs/jpgs or the total size of uploaded files exceed 4MB");
+      if (!res.ok)
+        throw new Error(
+          "Either your image(s) aren't pngs/jpgs or the total size of uploaded files exceed 4MB"
+        );
       setSuccess(true);
     } catch (err: any) {
       setError(err.message || "Something went wrong.");
@@ -133,6 +136,16 @@ export default function Register() {
           <span className="font-bold">September 6th at Billings Bridge</span>.
           Your participation helps support a great cause, and we can’t wait to
           see all the amazing builds and car lovers coming together.
+        </p>
+        <p className="mt-2">
+          Once your registration has been reviewed and accepted, you’ll receive
+          a link to make a{" "}
+          <span className="font-bold">$30 donation to CNIB</span>. This donation
+          acts as your <span className="font-bold">registration fee</span> for
+          the event. After donating, please email us a screenshot or
+          confirmation of your donation to{" "}
+          <span className="font-bold">driveforsight@gmail.com</span> to{" "}
+          <span className="font-bold">secure your spot</span> in the show.
         </p>
         <p className="mt-2">
           Questions? DM us on Instagram{" "}
@@ -241,10 +254,12 @@ export default function Register() {
         </div>
         <div>
           <label className="block font-semibold mb-1" htmlFor="files">
-            Please submit at minimum 1 photo of your vehicle. <span className="text-red-400">*</span>
+            Please submit at minimum 1 photo of your vehicle.{" "}
+            <span className="text-red-400">*</span>
           </label>
           <p className="text-sm text-gray-300 mb-2">
-            Only PNG and JPG are accepted. The total size of the uploaded files must not exceed 4MB.
+            Only PNG and JPG are accepted. The total size of the uploaded files
+            must not exceed 4MB.
           </p>
           <label
             htmlFor="files"
