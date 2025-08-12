@@ -91,7 +91,7 @@ export default function Register() {
         body: formData,
       });
 
-      if (!res.ok) throw new Error("Please input a jpg or png.");
+      if (!res.ok) throw new Error("Either your image(s) aren't pngs/jpgs or the total size of uploaded files exceed 4MB");
       setSuccess(true);
     } catch (err: any) {
       setError(err.message || "Something went wrong.");
@@ -241,10 +241,10 @@ export default function Register() {
         </div>
         <div>
           <label className="block font-semibold mb-1" htmlFor="files">
-            Please submit 3-5 photos of your vehicle. <span className="text-red-400">*</span>
+            Please submit at minimum 1 photo of your vehicle. <span className="text-red-400">*</span>
           </label>
           <p className="text-sm text-gray-300 mb-2">
-            Only PNG and JPG are accepted.
+            Only PNG and JPG are accepted. The total size of the uploaded files must not exceed 4MB.
           </p>
           <label
             htmlFor="files"
