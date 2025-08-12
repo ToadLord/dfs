@@ -23,19 +23,23 @@ export default function Register() {
       const previewUrls: string[] = [];
 
       for (const file of Array.from(files)) {
-        if (file.type === "image/heic" || file.name.endsWith(".heic")) {
+        if (
+          file.type === "image/heic" ||
+          file.type === "image/heif" ||
+          file.name.toLowerCase().endsWith(".heic") ||
+          file.name.toLowerCase().endsWith(".heif")
+        ) {
           // Dynamically import heic2any only on the client
           try {
             const heic2any = (await import("heic2any")).default;
             const convertedBlob = (await heic2any({
               blob: file,
-              toType: "image/jpeg",
-              quality: 0.9,
+              toType: "image/png", // Convert to PNG
             })) as Blob;
             const convertedFile = new File(
               [convertedBlob],
-              file.name.replace(/\.heic$/i, ".jpg"),
-              { type: "image/jpeg" }
+              file.name.replace(/\.(heic|heif)$/i, ".png"), // Use .png extension
+              { type: "image/png" }
             );
             newFiles.push(convertedFile);
             previewUrls.push(URL.createObjectURL(convertedFile));
