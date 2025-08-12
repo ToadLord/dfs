@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import heic2any from "heic2any";
 
 export default function Register() {
   const [form, setForm] = useState({
@@ -16,14 +17,39 @@ export default function Register() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, files } = e.target;
     if (name === "files" && files) {
-      // Accept all images and pdfs, no count/size restriction
-      const newFiles = Array.from(files).filter(
-        (file) =>
-          file.type.startsWith("image/") || file.type === "application/pdf"
-      );
+      const newFiles: File[] = [];
+      const previewUrls: string[] = [];
+
+      for (const file of Array.from(files)) {
+        if (file.type === "image/heic" || file.name.endsWith(".heic")) {
+          // Convert HEIC to JPEG
+          try {
+            const convertedBlob = (await heic2any({
+              blob: file,
+              toType: "image/jpeg",
+              quality: 0.9,
+            })) as Blob;
+            const convertedFile = new File(
+              [convertedBlob],
+              file.name.replace(/\.heic$/i, ".jpg"),
+              { type: "image/jpeg" }
+            );
+            newFiles.push(convertedFile);
+            previewUrls.push(URL.createObjectURL(convertedFile));
+          } catch (err) {
+            // Optionally handle conversion error
+          }
+        } else {
+          newFiles.push(file);
+          previewUrls.push(
+            file.type.startsWith("image/") ? URL.createObjectURL(file) : ""
+          );
+        }
+      }
+
       // Combine with existing files, filter duplicates if desired
       const allFiles = [...form.files, ...newFiles].filter(
         (file, idx, arr) =>
@@ -31,12 +57,7 @@ export default function Register() {
           idx
       );
       setForm((f) => ({ ...f, files: allFiles }));
-
-      // Generate previews for images only
-      const previewUrls = allFiles.map((file) =>
-        file.type.startsWith("image/") ? URL.createObjectURL(file) : ""
-      );
-      setPreviews(previewUrls);
+      setPreviews([...previews, ...previewUrls]);
     } else {
       setForm((f) => ({ ...f, [name]: value }));
     }
@@ -232,12 +253,8 @@ export default function Register() {
             onDrop={(e) => {
               e.preventDefault();
               const files = Array.from(e.dataTransfer.files);
-              // Accept all images and pdfs, no count/size restriction
-              const accepted = files.filter(
-                (file) =>
-                  file.type.startsWith("image/") ||
-                  file.type === "application/pdf"
-              );
+              // Accept all files, no count/size restriction
+              const accepted = files;
               // Combine with existing files, filter duplicates if desired
               const allFiles = [...form.files, ...accepted].filter(
                 (file, idx, arr) =>
@@ -273,7 +290,6 @@ export default function Register() {
               type="file"
               name="files"
               id="files"
-              accept="image/*,application/pdf"
               multiple
               onChange={handleChange}
               disabled={submitting}
