@@ -16,7 +16,7 @@ export default function Header() {
     { label: "Register", href: "/register" },
     { label: "Sponsor", href: "/sponsor" },
     { label: "Contact", href: "/contact" },
-    { label: "Donate", href: "/donate" }
+    { label: "Donate", href: "https://secure.cnib.ca/ui/drive/ticketed/donation/start" }
   ];
 
   return (
